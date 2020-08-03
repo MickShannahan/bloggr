@@ -29,11 +29,11 @@ export default {
 @import "./assets/_overrides.scss";
 
 .text-fade {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.651);
 }
 
 .bg-darker {
-  background-color: rgb(212, 212, 212);
+  background-color: rgb(239, 240, 222);
 }
 .corners-t {
   border-top-right-radius: 18px !important;

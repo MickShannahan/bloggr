@@ -7,10 +7,10 @@
       <img class="img-fluid" :src="blogData.creator.picture" alt />
     </div>
     <div class="overlay-fade corners-b"></div>
-    <div class="bg-primary p-1 pl-4 text-light">
+    <div class="bg-primary corners-t p-1 pl-4 text-light">
       <small class="text-fade pl-1">{{nameNoEmail}}</small>
     </div>
-    <h5 class="pl-2 pt-1 mb-0 border-rounded border-bottom">{{blogData.title}}...</h5>
+    <h5 class="pl-2 pt-1 mb-0 border-rounded corners-t border-bottom">{{blogData.title}}...</h5>
     <div class="pb-3 pr-3 pl-3 height-body overflow-hidden">{{blogData.body}}</div>
   </div>
 </template>
@@ -47,8 +47,8 @@ export default {
 .col-blog-block {
   border-top-right-radius: 0%;
   border-top-left-radius: 0%;
-  border-bottom: 3px solid rgba(0, 0, 0, 0.5) !important;
-  width: 29vw;
+  border-bottom: 4px solid rgba(109, 110, 0, 0.5) !important;
+  width: 28vw;
   min-height: 15vh;
   max-height: 32vh;
 }

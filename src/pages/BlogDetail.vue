@@ -79,7 +79,12 @@
           class="BlogDetail col-12 corners-b p-3 pl-5 border-bottom"
         >
           <div class="row">
-            <div class="col-11">{{comment.body}}</div>
+            <div class="col-11">
+              {{comment.body}}
+              <small
+                class="text-secondary ml-3"
+              >{{comment.creator.name.split("@")[0]}}</small>
+            </div>
             <button
               v-if="comment.creator.email == user.email"
               class="col btn btn-outline-dark p-0 pb-1 mr-1"
@@ -166,7 +171,7 @@ export default {
 
 <style>
 .author-card-blog {
-  max-height: 35vh;
+  max-height: 50vh;
 }
 
 .blog-body {

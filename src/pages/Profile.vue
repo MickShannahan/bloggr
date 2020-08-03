@@ -3,7 +3,7 @@
     <!-- MODAL -->
     <div class="modal fade" id="createBlog" tabindex="-1" role="dialog">
       <div class="modal-dialog" role="document">
-        <form class="modal-content corners">
+        <form class="modal-content corners" @submit.prevent>
           <div class="modal-header">
             <h5 name="title" class="modal-title">What to write...</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -66,7 +66,7 @@
         >
           {{comment.body}}
           <i
-            class="fa fa-arrow-right text-fade"
+            class="fa fa-arrow-right text-secondary"
             @click="moveToPage(comment.blogId)"
           ></i>
         </div>
@@ -90,6 +90,9 @@ export default {
     this.getUserComments();
   },
   computed: {
+    blogs() {
+      this.$store.state.blogs;
+    },
     profile() {
       return this.$store.state.profile;
     },
@@ -107,7 +110,12 @@ export default {
       }
     },
     userComments() {
-      return this.$store.state.userComments;
+      let comments = this.$store.state.userComments;
+      // comments.filter(
+      //   (comment) =>
+      //     comment.blogId == this.blogs.find(blog.id == comment.blogId).id
+      // );
+      return comments;
     },
   },
   methods: {
