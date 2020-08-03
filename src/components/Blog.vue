@@ -1,17 +1,19 @@
 <template>
-  <div
-    class="Blog card col-blog-block corners shadow-sm mb-3 bg-light border-0"
-    @click="moveToBlogDetail"
-  >
-    <div class="creator-bubble">
-      <img class="img-fluid" :src="blogData.creator.picture" alt />
+  <div class="card-fix">
+    <div
+      class="Blog card col-blog-block corners shadow-sm mb-3 bg-light border-0"
+      @click="moveToBlogDetail"
+    >
+      <div class="creator-bubble">
+        <img class="img-fluid" :src="blogData.creator.picture" alt />
+      </div>
+      <div class="overlay-fade corners-b"></div>
+      <div class="bg-primary corners-t p-1 pl-4 text-light">
+        <small class="text-fade pl-1">{{nameNoEmail}}</small>
+      </div>
+      <h5 class="pl-2 pt-1 mb-0 border-rounded corners-t border-bottom">{{blogData.title}}...</h5>
+      <div class="pb-3 pr-3 pl-3 height-body overflow-hidden">{{blogData.body}}</div>
     </div>
-    <div class="overlay-fade corners-b"></div>
-    <div class="bg-primary corners-t p-1 pl-4 text-light">
-      <small class="text-fade pl-1">{{nameNoEmail}}</small>
-    </div>
-    <h5 class="pl-2 pt-1 mb-0 border-rounded corners-t border-bottom">{{blogData.title}}...</h5>
-    <div class="pb-3 pr-3 pl-3 height-body overflow-hidden">{{blogData.body}}</div>
   </div>
 </template>
 
@@ -81,5 +83,8 @@ export default {
 }
 .height-body {
   max-height: 20vh;
+}
+.card-fix {
+  padding-top: 12px;
 }
 </style>

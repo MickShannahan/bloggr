@@ -153,7 +153,7 @@ export default {
     },
     deletePost() {
       this.$store.dispatch("deleteBlog", this.blog.id);
-      this.router.push({ name: "Home" });
+      this.$router.push({ name: "Home" });
     },
     deleteComment(commentId) {
       this.$store.dispatch("deleteComment", commentId);
