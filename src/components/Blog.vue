@@ -44,9 +44,6 @@ export default {
 
 
 <style scoped>
-.text-fade {
-  color: rgba(200, 200, 200, 0.6);
-}
 .col-blog-block {
   border-top-right-radius: 0%;
   border-top-left-radius: 0%;

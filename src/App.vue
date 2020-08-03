@@ -29,7 +29,7 @@ export default {
 @import "./assets/_overrides.scss";
 
 .text-fade {
-  color: rgba(200, 200, 200, 0.7);
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .bg-darker {
